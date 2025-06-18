@@ -13,7 +13,9 @@ mainForm.addEventListener("submit", function(e){
     else{
         console.log("El nombre "+ input_nom.value + " es inválido")
         e.preventDefault();
-        alert("El nombre no puede contener números");
+        input_nom.value = "";
+        input_nom.style.border = "3px solid red";
+        input_nom.placeholder = "El nombre no pueden ser números";
         return false;
     }
 
@@ -24,14 +26,18 @@ mainForm.addEventListener("submit", function(e){
     else{
         console.log("El código postal es incorrecto");
         e.preventDefault();
-        alert("Código postal incorrecto");
+        input_codigopostal.value = "";
+        input_codigopostal.style.border = "3px solid red";
+        input_codigopostal.placeholder = "El código postal es incorrecto";
         return false;
     }
 
     if(isNaN(input_edad.value)==true){
         console.log("La edad no es numérica");
         e.preventDefault();
-        alert("Edad incorrecta");
+        input_edad.value = "";
+        input_edad.style.border = "3px solid red";
+        input_edad.placeholder = "La edad no es numérica";
         return false;
     }
     else{
@@ -47,20 +53,22 @@ mainForm.addEventListener("submit", function(e){
     else{
         console.log("Género inválido");
         e.preventDefault();
-        alert("El género es inválido");
+        input_genero.value = "";
+        input_genero.style.border = "3px solid red";
+        input_genero.placeholder = "El género es inválido";
         return false;
     }
 
     let intereses_selec = ["tecnologia", "deportes", "musica", "arte"];
     let input_intereses = document.querySelector("input[name='intereses']")
-    console.log("Intereses seleccionaos: "+ input_intereses.value);
     if(intereses_selec.indexOf(input_intereses.value)!=-1)[
         console.log("Intereses bien")
     ]
     else{
         console.log("Intereses inválidos");
-        e.preventDefault();
-        alert("Los intereses son inválidos");
+        input_intereses.value = "";
+        input_intereses.style.border = "3px solid red";
+        input_intereses.placeholder = "Los intereses son inválidos";
         return false;
     }
 
@@ -71,9 +79,11 @@ mainForm.addEventListener("submit", function(e){
         console.log("País admitido " + input_pais.value)
     ]
     else{
-        console.log("País válido");
+        console.log("País inválido");
         e.preventDefault();
-        alert("El país es inválido");
+        input_pais.value = "";
+        input_pais.style.border = "3px solid red";
+        input_pais.placeholder = "El país es inválido";
         return false;
     }
 });

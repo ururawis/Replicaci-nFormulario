@@ -12,3 +12,7 @@ body{
     justify-self: center;
     padding: 20px; 
 }
+input{
+    height: auto;
+    width: max-content;
+}
