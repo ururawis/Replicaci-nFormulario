@@ -1,15 +1,14 @@
 body{
-    background-color: rgb(66, 119, 187);
+    background-color: rgb(126, 17, 49);
 }
 .container{
-    width: 50%;
-    height: 620px;
+    width: auto;
     background-color: #ffffff;
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
     border-radius: 5%;
+    align-items: center;
     justify-content: center;
     justify-self: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
+    padding: 20px; 
 }
